@@ -1,0 +1,68 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "apps.dflc.salesorderts.YY1_SLSMEX_DFLC",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0"
+		},
+		"title": "{{appTitle}}"
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			""
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"dependencies": {
+			"minUI5Version": "1.141.1"
+		},
+		"extends": {
+			"component": "apps.dflc.salesorderts",
+			"extensions": {
+				"sap.ui.viewModifications": {
+					"apps.dflc.salesorderts.view.OrderList": {
+						"bt-cancel": {
+							"visible": false
+						},
+						"_IDGenButton4": {
+							"visible": false
+						}
+					}
+				},
+				"sap.ui.viewReplacements": {
+					"apps.dflc.salesorderts.view.OrderList": {
+						"viewName": "apps.dflc.salesorderts.YY1_SLSMEX_DFLC.view.OrderListCustom",
+						"type": "XML"
+					}
+				},
+				"sap.ui.controllerExtensions": {
+					"apps.dflc.salesorderts.controller.OrderList": {
+						"controllerName": "apps.dflc.salesorderts.YY1_SLSMEX_DFLC.controller.OrderListCustom"
+					}
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/yy1_slsmex_dflc/webapp",
+		"_version": "1.1.0"
+	}
+}

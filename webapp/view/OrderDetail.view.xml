@@ -1,0 +1,161 @@
+<mvc:View controllerName="apps.dflc.salesorderts.YY1_SLSMEX_DFLC.controller.OrderDetail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:t="sap.ui.table"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>OrderDetail}" showNavButton="true" navButtonPress="onPageBack" class="sapUiContentPadding">
+    
+        <VBox id="_IDGenerateVBox1">
+            <f:Form id="FormChange354"
+                editable="false">
+                <f:title>
+                    <core:Title id="_IDGenerateTitle" text="Header" />
+                </f:title>
+                <f:layout>
+                    <f:ResponsiveGridLayout id="_IDGenerateResponsiveGridLayout"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="_IDGenerateFormContainer">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenerateFormElement" label="{i18n>SalesOrderID}">
+                                <f:fields>
+                                    <Input id="_IDGenerateInput" value="{/SalesOrderID}" editable="false"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement1" label="{i18n>CreationDateTime}">
+                                <f:fields>
+                                    <DateTimePicker
+                                        id="SalesOrder.CreationDateTime"
+                                        placeholder="Date and hour"
+                                        class="sapUiSmallMarginBottom"
+                                        showFooter="true"
+                                        value="{
+                                            'path':'/CreationDateTime',
+                                            'type':'sap.ui.model.type.DateTime',
+                                            'formatOptions': {
+                                                'pattern': 'dd/MM/yyyy HH:mm:ss',
+                                                'UTC': true
+                                            }
+                                        }"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement2" label="{i18n>CreatedBy}">
+                                <f:fields>
+                                    <Input id="SalesOrder.CreatedBy" editable="false" value="{/CreatedBy}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement3" label="{i18n>CustomerID}">
+                                <f:fields>
+                                    <Input id="SalesOrder.CustomerID" editable="false" type="Number" value="{/CustomerID}" required="true"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement4" label="{i18n>TotalItems}">
+                                <f:fields>
+                                    <Input id="_IDGenerateInput1" value="{path: '/TotalItems', formatter: '.formatter.formatPrice'}" type="Text" editable="false"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement5" label="{i18n>TotalFreight}">
+                                <f:fields>
+                                    <Input id="SalesOrder.TotalFreight" editable="false" value="{path: '/TotalFreight', formatter: '.formatter.formatPrice'}" liveChange="liveChangePrice"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement6" label="{i18n>TotalOrder}">
+                                <f:fields>
+                                    <Input id="_IDGenerateInput2" value="{path: '/TotalOrder', formatter: '.formatter.formatPrice'}" type="Text" editable="false"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenerateFormElement7" label="{i18n>Status}">
+                                <f:fields>
+                                    <Select id="SalesOrder.Status" selectedKey="{/Status}" editable="false">
+                                        <items>
+                                            <core:Item id="_IDGenerateItem" text="" key=""/>
+                                            <core:Item id="_IDGenerateItem1" text="{i18n>StatusN}" key="N"/>
+											<core:Item id="_IDGenerateItem2" text="{i18n>StatusL}" key="L"/>
+                                            <core:Item id="_IDGenerateItem3" text="{i18n>StatusF}" key="F"/>
+                                            <core:Item id="_IDGenerateItem4" text="{i18n>StatusC}" key="C"/>
+                                        </items>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </VBox>
+        <VBox id="_IDGenerateVBox2">
+
+            <t:Table id="table2"
+				rows="{/toItem}"
+				visibleRowCount="10"
+				threshold="0"
+				selectionMode="None"
+				class="sapUiSmallMargin"
+				
+				>
+				<t:toolbar>
+					<OverflowToolbar id="_IDGenerateOverflowToolbar">
+						<Title id="title2" text="Itens"></Title>
+					</OverflowToolbar>
+				</t:toolbar>
+				<t:columns>
+					<t:Column id="_IDGenerateColumn" width="60px" sortProperty="SalesOrderItemNumber">
+						<Label id="_IDGenerateLabel" text="{i18n>SalesOrderItemNumber}" />
+						<t:template>
+							<Text id="_IDGenerateText" text="{SalesOrderItemNumber}" wrapping="false" />
+						</t:template>
+					</t:Column>
+                    <t:Column id="_IDGenerateColumn1" width="100px">
+						<Label id="_IDGenerateLabel1" text="{i18n>Material}" />
+						<t:template>
+							<Input id="_IDGenerateInput3" value="{Material}" editable="false" type="Text" />
+						</t:template>
+					</t:Column>
+                    <t:Column id="_IDGenerateColumn2" width="400px">
+						<Label id="_IDGenerateLabel2" text="{i18n>Description}" />
+						<t:template>
+                            <Input id="_IDGenerateInput4" editable="false" value="{Description}" />
+						</t:template>
+					</t:Column>
+                    <t:Column id="_IDGenerateColumn3" width="100px">
+						<Label id="_IDGenerateLabel3" text="{i18n>Quantity}" />
+						<t:template>
+							<Input id="_IDGenerateInput5" editable="false" value="{Quantity}" type="Number" liveChange="liveChangeItemQuantity" />
+						</t:template>
+					</t:Column>
+                    <t:Column id="_IDGenerateColumn4" width="100px">
+						<Label id="_IDGenerateLabel4" text="{i18n>UnitPrice}" />
+						<t:template>
+							<Input id="_IDGenerateInput6" editable="false" value="{path: 'UnitPrice', formatter: '.formatter.formatPrice'}" liveChange="liveChangePrice"/>
+						</t:template>
+					</t:Column>
+                    <t:Column id="_IDGenerateColumn5" width="100px">
+						<Label id="_IDGenerateLabel5" text="{i18n>TotalPrice}" />
+						<t:template>
+							<Text id="_IDGenerateText1" editable="false" text="{path: 'TotalPrice', formatter: '.formatter.formatPrice'}" wrapping="false" />
+						</t:template>
+					</t:Column>
+                </t:columns>
+            </t:Table>
+        </VBox>
+        <footer>
+            <Toolbar id="_IDGenerateToolbar">
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>
