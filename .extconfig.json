@@ -1,0 +1,54 @@
+{
+    "controllers": {
+        "App": "YY1_SLSMTS_DFLC%2fcontroller%2fApp.controller.js",
+        "BaseController": "YY1_SLSMTS_DFLC%2fcontroller%2fBaseController.controller.js",
+        "OrderForm": "YY1_SLSMTS_DFLC%2fcontroller%2fOrderForm.controller.js",
+        "OrderList": "YY1_SLSMTS_DFLC%2fcontroller%2fOrderList.controller.js"
+    },
+    "views": {
+        "App": "YY1_SLSMTS_DFLC%2fview%2fApp.view.xml",
+        "OrderForm": "YY1_SLSMTS_DFLC%2fview%2fOrderForm.view.xml",
+        "OrderList": "YY1_SLSMTS_DFLC%2fview%2fOrderList.view.xml"
+    },
+    "fragments": {
+        "MessageList": "YY1_SLSMTS_DFLC%2fview%2fMessageList.fragment.xml"
+    },
+    "type": "abaprep",
+    "shouldLinkComponentToManifest": false,
+    "component": "YY1_SLSMTS_DFLC%2fComponent.js",
+    "manifest": "YY1_SLSMTS_DFLC%2fmanifest.json",
+    "minUI5Version": "1.141.1",
+    "system": {
+        "name": "sap",
+        "description": "sap connection",
+        "proxyUrlPrefix": "/destinations/sap",
+        "path": "/sap/bc/adt",
+        "url": "/destinations/sap/sap/bc/adt",
+        "wattUsage": "dev_abap",
+        "entryPath": "/sap/bc/adt",
+        "sapClient": "001",
+        "additionalData": []
+    },
+    "discoveryStatus": {
+        "csrfToken": "Ev85DbcOSUrHtcbHyKF_sQ==",
+        "transports": "/destinations/sap/sap/bc/adt/cts/transports",
+        "transportchecks": "/destinations/sap/sap/bc/adt/cts/transportchecks",
+        "filestore_ui5_bsp": "/destinations/sap/sap/bc/adt/filestore/ui5-bsp/objects",
+        "search": "/destinations/sap/sap/bc/adt/repository/informationsystem/search",
+        "ato_settings": "/destinations/sap/sap/bc/adt/ato/settings",
+        "ui5_rt_version": "/destinations/sap/sap/bc/adt/filestore/ui5-bsp/ui5-rt-version",
+        "description": "sap connection",
+        "proxyUrlPrefix": "/destinations/sap"
+    },
+    "BSPName": "YY1_SLSMTS_DFLC",
+    "namespace": "apps.dflc.salesorderts",
+    "resourceBundle": {
+        "bundleUrl": "i18n/i18n.properties",
+        "supportedLocales": [
+            "",
+            "en",
+            "pt"
+        ]
+    },
+    "parentResourceRootUrl": "/destinations/sap/sap/bc/ui5_ui5/sap/YY1_SLSMTS_DFLC"
+}
